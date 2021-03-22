@@ -1,19 +1,17 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import LanguageSwitch from "@components/LanguageSwitch";
 
-export default function Home({ title }) {
+export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>{title}</title>
+        <title>SUP SUP</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <LanguageSwitch />
-        <Header title={title} />
+        <Header title={"SUP SUP"} />
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
@@ -23,13 +21,3 @@ export default function Home({ title }) {
     </div>
   );
 }
-
-export const getStaticProps = async ({ locale }) => {
-  const title = locale === "nl" ? "Hallo vreemdeling" : "Hello stranger";
-
-  return {
-    props: {
-      title,
-    },
-  };
-};
